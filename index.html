@@ -1,440 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Code Cortex | Software House in Pakistan | Web & Mobile App Development</title>
-  <meta name="description" content="Code Cortex - Leading software house in Attock, Pakistan. We provide custom web development, mobile apps, AI solutions, and IT services for businesses worldwide.">
-  <meta name="keywords" content="software house Pakistan, web development, mobile app development, AI solutions, IT services Pakistan, custom software, responsive websites, React development, Android iOS apps">
-  <meta name="author" content="Code Cortex (SMC-Pvt.) Ltd.">
-  <link rel="canonical" href="https://codecortexdigital.github.io/com/">
-  <meta name="theme-color" content="#2b2e3d">
-  <meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Code Cortex | Software House in Pakistan | IT & AI Solutions">
-  <meta property="og:description" content="Professional web & mobile app development, AI solutions, and IT services. Transforming ideas into scalable digital solutions.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://codecortexdigital.github.io/com/">
-  <meta property="og:image" content="https://codecortexdigital.github.io/com/code_logo.png">
-  <meta property="og:site_name" content="Code Cortex">
+  <!-- SEO -->
+  <title>Code Cortex | Strategic Development Partner for USA & UAE</title>
+  <meta name="description" content="Code Cortex provides elite engineering teams for web, mobile & AI solutions. 40% faster delivery, 60% cost savings." />
+  <meta name="keywords" content="software house Pakistan, web development, mobile apps, AI solutions" />
+  <meta name="author" content="Code Cortex (Pvt.) Ltd." />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Code Cortex | Software House in Pakistan">
-  <meta name="twitter:description" content="Web & Mobile App Development, AI solutions, and IT services by Code Cortex in Pakistan.">
-  <meta name="twitter:image" content="https://codecortexdigital.github.io/com/code_logo.png">
-
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Load CSS Files -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
   <!-- Favicon -->
-  <link rel="icon" href="code_logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="code_logo.png">
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Code Cortex (SMC-Pvt.) Ltd.",
-    "url": "https://codecortexdigital.github.io/com/",
-    "logo": "https://codecortexdigital.github.io/com/code_logo.png",
-    "description": "Leading software house in Pakistan providing web development, mobile apps, AI solutions, and IT services.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Attock",
-      "addressCountry": "PK"
-    },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+92-315-722-7688",
-      "contactType": "customer service",
-      "email": "info@codecortexdigital.com",
-      "areaServed": "PK",
-      "availableLanguage": ["en", "ur"]
-    }],
-    "sameAs": [
-      "https://www.facebook.com/codecortex",
-      "https://www.linkedin.com/company/codecortex",
-      "https://twitter.com/codecortex"
-    ]
-  }
-  </script>
-
-  <style>
-    /* Home-specific styles */
-    .hero {
-      text-align: center;
-      padding: 8rem 2rem 5rem;
-      background: linear-gradient(135deg, var(--bg) 0%, #2b2e3d 100%);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 80px;
-    }
-    
-    .hero h2 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 1.5rem;
-      background: linear-gradient(90deg, var(--accent), var(--cta));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.2;
-    }
-    
-    .hero p {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      color: var(--muted);
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-    }
-    
-    /* Careers button in header */
-    .careers-btn {
-      background: var(--careers-primary);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      margin-left: 10px;
-    }
-    
-    .careers-btn:hover {
-      background: var(--careers-secondary);
-      transform: translateY(-2px);
-    }
-    
-    /* Contact section specific */
-    .contact-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    
-    .contact-card {
-      background: var(--panel);
-      padding: 2rem;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-    }
-    
-    .contact-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .contact-icon {
-      font-size: 3rem;
-      color: var(--cta);
-      margin-bottom: 1rem;
-    }
-    
-    .benefits-list {
-      list-style: none;
-      text-align: left;
-      max-width: 500px;
-      margin: 2rem auto;
-    }
-    
-    .benefits-list li {
-      margin-bottom: 1rem;
-      padding-left: 2rem;
-      position: relative;
-    }
-    
-    .benefits-list li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--maintenance-primary);
-    }
-  </style>
+  <link rel="icon" href="assets/code_logo.png" />
 </head>
+
 <body data-theme="dark">
 
-  <!-- Header -->
-  <header>
-    <div class="header-left">
-      <a href="index.html" class="logo-link" aria-label="Code Cortex - Return to home page">
-        <img src="code_logo.png" alt="Code Cortex - Software House Pakistan" class="logo-img" width="55" height="55" />
-        <h1>Code Cortex</h1>
-      </a>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="careers.html" class="careers-btn">Careers</a>
-    </nav>
-  </header>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero" data-aos="fade-up">
-    <h2 id="animatedText">Innovating Ideas.</h2>
-    <p>We design & build scalable Websites, Mobile apps, and AI-driven solutions for businesses worldwide.</p>
-    <a href="#contact" class="cta-btn">Get in Touch</a>
-  </section>
+  <!-- Loading bar -->
+  <div class="loading-bar" id="loadingBar"></div>
 
-  <!-- Services Preview -->
-  <section id="services" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <div class="cards-container">
-      <div class="card" data-aos="fade-up">
-        <i class="fas fa-code"></i>
-        <h3>Web Development</h3>
-        <p>Responsive, SEO-optimized websites using modern technologies like React, Vue.js, and Node.js with best practices.</p>
-        <a href="web-development.html" class="service-btn">Learn More</a>
+  <!-- HEADER (loaded via include.js) -->
+  <div id="site-header"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <h2 id="animatedText">
+        Your Strategic Development Partner for USA & UAE Markets
+      </h2>
+
+      <p>
+        Elite Pakistani engineering talent delivering enterprise software
+        <strong>40% faster</strong> at <strong>60% cost savings</strong>.
+      </p>
+
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+        <a href="services.html" class="btn btn-secondary">Our Services</a>
       </div>
 
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Mobile Apps</h3>
-        <p>Custom Android & iOS applications with modern UI/UX, cross-platform solutions, and seamless performance.</p>
-        <a href="mobile-apps.html" class="service-btn">Learn More</a>
-      </div>
-
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-brain"></i>
-        <h3>AI Solutions</h3>
-        <p>Smart applications powered by AI & machine learning to automate processes and drive business innovation.</p>
-        <a href="ai-solutions.html" class="service-btn">Learn More</a>
-      </div>
-
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-headset"></i>
-        <h3>Maintenance & Support</h3>
-        <p>Regular updates, bug fixes, performance monitoring, and dedicated IT support for all your digital solutions.</p>
-        <a href="maintenance.html" class="service-btn">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Teaser -->
-  <section id="about" data-aos="fade-up">
-    <h2>About Us</h2>
-    <div class="cards-container">
-      <div class="card" data-aos="fade-up">
-        <h3>Who We Are</h3>
-        <p>Code Cortex is a premier software house in Pakistan, passionate about delivering modern, scalable digital solutions that drive business growth.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <h3>Our Mission</h3>
-        <p>To innovate and deliver impactful tech experiences through intelligent design, robust architecture, and exceptional performance.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Our Vision</h3>
-        <p>To become the most trusted technology partner for startups and enterprises worldwide, driving digital transformation and growth.</p>
-      </div>
-    </div>
-    <a href="about.html" class="cta-button" style="margin-top: 3rem;">Learn More About Us</a>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" data-aos="fade-up">
-    <h2>Our Portfolio</h2>
-    <div class="cards-container">
-      <div class="card" data-aos="fade-up">
-        <i class="fas fa-laptop-code"></i>
-        <h3>E-Commerce Platform</h3>
-        <p>Complete e-commerce solution with payment integration, inventory management, and responsive design.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Food Delivery App</h3>
-        <p>Native mobile application for iOS and Android with real-time tracking and secure payment processing.</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-brain"></i>
-        <h3>AI Analytics Dashboard</h3>
-        <p>Business intelligence platform with predictive analytics and automated reporting capabilities.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Get In Touch</h2>
-    <p style="margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-      Ready to start your project? Contact us directly for fastest response and guaranteed communication.
-    </p>
-    
-    <div class="contact-options">
-      <div class="contact-card">
-        <i class="fas fa-envelope contact-icon"></i>
-        <h3>Email Us</h3>
-        <p>Send detailed project requirements</p>
-        <a href="mailto:info@codecortexdigital.com" class="service-btn">Send Email</a>
-      </div>
-
-      <div class="contact-card">
-        <i class="fab fa-whatsapp contact-icon"></i>
-        <h3>WhatsApp</h3>
-        <p>Chat directly for quick questions</p>
-        <a href="https://wa.me/923157227688" target="_blank" class="service-btn">WhatsApp</a>
-      </div>
-
-      <div class="contact-card">
-        <i class="fas fa-phone contact-icon"></i>
-        <h3>Call Us</h3>
-        <p>Speak directly with our team</p>
-        <a href="tel:+923157227688" class="service-btn">Call Now</a>
-      </div>
-    </div>
-
-    <div style="margin-top: 3rem; padding: 2rem; background: var(--panel); border-radius: 15px;">
-      <h3 style="color: var(--accent); margin-bottom: 1rem;">Why Contact Directly?</h3>
-      <ul class="benefits-list">
-        <li><strong>Instant Response:</strong> No waiting for form processing</li>
-        <li><strong>Guaranteed Delivery:</strong> 100% message delivery rate</li>
-        <li><strong>Personalized Service:</strong> Direct communication with our team</li>
-        <li><strong>Faster Quotes:</strong> Get pricing within hours, not days</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>Code Cortex</h3>
-        <p>Building innovative digital solutions that drive business growth and transform user experiences.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/codecortex" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/codecortex" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/codecortex" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/codecortexdigital" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="social-proof">
+        <p>Trusted by companies in:</p>
+        <div class="client-logos">
+          <span>USA</span>
+          <span>UAE</span>
+          <span>Pakistan</span>
         </div>
       </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="web-development.html">Web Development</a></li>
-          <li><a href="mobile-apps.html">Mobile Apps</a></li>
-          <li><a href="ai-solutions.html">AI Solutions</a></li>
-          <li><a href="maintenance.html">Maintenance & Support</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Contact Information</h3>
-        <div class="contact-method">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <p>Attock, Punjab, Pakistan</p>
-          </div>
+    </section>
+
+    <!-- METRICS -->
+    <section class="metrics">
+      <div class="metrics-container">
+        <div class="metric-item">
+          <h3>50+</h3>
+          <p>Projects Delivered</p>
         </div>
-        <div class="contact-method">
-          <i class="fas fa-phone"></i>
-          <div>
-            <p>+92-315-722-7688</p>
-          </div>
+        <div class="metric-item">
+          <h3>99%</h3>
+          <p>Client Retention</p>
         </div>
-        <div class="contact-method">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <p>info@codecortexdigital.com</p>
-          </div>
+        <div class="metric-item">
+          <h3>40%</h3>
+          <p>Faster Delivery</p>
         </div>
-        <div class="contact-method">
-          <i class="fas fa-clock"></i>
-          <div>
-            <p>Monday - Saturday: 9AM - 6PM</p>
-          </div>
+        <div class="metric-item">
+          <h3>60%</h3>
+          <p>Cost Savings</p>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Code Cortex (Pvt.) Ltd. | All Rights Reserved</p>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Floating Buttons -->
-  <div class="float-btn">
-    <a href="https://wa.me/923157227688" target="_blank" class="whatsapp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="#hero" class="top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
-  </div>
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>We Solve Business Challenges</h2>
 
-  <!-- Theme Toggle -->
-  <button id="themeToggle">
-    <i class="fas fa-adjust"></i>
-  </button>
+      <div class="cards-container">
+        <div class="card">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Scalable, secure, high-performance web applications.</p>
+          <a href="web-development.html" class="btn btn-primary">Learn More</a>
+        </div>
 
-  <!-- Scripts -->
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Apps</h3>
+          <p>Android & iOS apps with clean UI and strong architecture.</p>
+          <a href="mobile-apps.html" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-brain"></i>
+          <h3>AI Solutions</h3>
+          <p>Automation, analytics, and AI-powered systems.</p>
+          <a href="ai-solutions.html" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-headset"></i>
+          <h3>Maintenance</h3>
+          <p>Monitoring, updates, and long-term technical support.</p>
+          <a href="maintenance.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <h2>Ready to Start?</h2>
+      <p>Get a free 30-minute technical consultation.</p>
+      <a href="contact.html" class="btn-large">Contact Us</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="site-footer"></div>
+
+  <!-- SCRIPTS (ORDER MATTERS) -->
+  <script src="js/include.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    // Initialize AOS
-    document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({
-        once: true,
-        duration: 800,
-        offset: 100
-      });
+  <script src="js/main.js"></script>
 
-      // Hero text animation
-      const lines = [
-        "Innovating Ideas.", 
-        "Crafting Interfaces.", 
-        "Accelerating Tech.", 
-        "Delivering Experiences."
-      ];
-      const textEl = document.getElementById('animatedText');
-      let idx = 0;
-      
-      setInterval(() => { 
-        idx = (idx + 1) % lines.length; 
-        textEl.style.opacity = '0';
-        setTimeout(() => {
-          textEl.textContent = lines[idx];
-          textEl.style.opacity = '1';
-        }, 500);
-      }, 3000);
-
-      // Theme toggle
-      const themeBtn = document.getElementById('themeToggle');
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      
-      document.body.setAttribute('data-theme', savedTheme);
-      
-      themeBtn.addEventListener('click', () => {
-        const current = document.body.getAttribute('data-theme');
-        const newTheme = current === 'dark' ? 'light' : 'dark';
-        document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    });
-  </script>
 </body>
 </html>
