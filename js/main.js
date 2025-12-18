@@ -10,18 +10,16 @@
    - Header hide/show on scroll
 ================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("navMenu");
 
-  /* ---------- AOS INIT ---------- */
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      once: true,
-      offset: 50,
-      duration: 800,
-      delay: 100,
-      throttleDelay: 99
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
     });
   }
+});
 
   /* ---------- LOADING BAR ---------- */
   const loadingBar = document.getElementById('loadingBar');
@@ -127,3 +125,4 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('error', (e) => {
   console.error('Runtime error:', e.error || e.message);
 });
+
