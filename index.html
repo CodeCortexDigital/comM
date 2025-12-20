@@ -199,10 +199,6 @@
       border: 1px solid rgba(15, 23, 42, 0.1);
     }
 
-    body.light-theme .job-item {
-      border-bottom: 1px solid rgba(15, 23, 42, 0.1);
-    }
-
     body.light-theme footer {
       border-top: 1px solid rgba(15, 23, 42, 0.1);
     }
@@ -543,39 +539,6 @@
       padding: 1.5rem;
     }
 
-    /* Careers Section */
-    .careers-list {
-      max-width: 800px;
-      margin: 3rem auto 0;
-    }
-
-    .job-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem;
-      background: var(--secondary-dark);
-      border-radius: var(--border-radius);
-      margin-bottom: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      transition: var(--transition);
-    }
-
-    .job-item:hover {
-      background: rgba(251, 191, 36, 0.05);
-      transform: translateX(5px);
-    }
-
-    .job-tag {
-      background: rgba(16, 185, 129, 0.1);
-      color: var(--success);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.875rem;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-
     /* Contact Section */
     .contact-container {
       display: flex;
@@ -828,6 +791,32 @@
       line-height: 1.8;
     }
 
+    /* Form Controls */
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--primary-dark);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--border-radius);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+    }
+
+    /* Careers Button */
+    .careers-button-container {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .mobile-menu-btn {
@@ -886,20 +875,6 @@
         bottom: 1rem;
       }
 
-      .careers-list {
-        padding: 2rem;
-      }
-
-      .job-item {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-      }
-
-      .job-info {
-        width: 100%;
-      }
-
       .btn {
         width: 100%;
       }
@@ -915,6 +890,10 @@
 
       .seo-section {
         padding: 1.5rem;
+      }
+
+      .careers-button-container {
+        padding: 1rem;
       }
     }
 
@@ -959,7 +938,7 @@
         color: black !important;
       }
       
-      .card, .portfolio-item, .careers-list {
+      .card, .portfolio-item {
         border: 1px solid #ddd !important;
         box-shadow: none !important;
       }
@@ -1189,17 +1168,20 @@
       </p>
     </div>
 
-    <div class="careers-list"></div>
-    
-    <div style="max-width:700px;margin:3rem auto 0;text-align:center;">
-      <p style="color:var(--text-muted);font-size:1.1rem;">
-        Opportunities are available across multiple roles including development,
-        design, engineering, and technology operations.
+    <div class="careers-button-container">
+      <p style="color:var(--text-muted);font-size:1.1rem;margin-bottom:2rem;">
+        We're always looking for talented individuals to join our growing team. 
+        Click the button below to apply for available positions.
       </p>
 
-      <a onclick="openApplicationForm()" class="btn btn-outline" style="margin-top:1.5rem;">
+      <a href="javascript:void(0)" onclick="openApplicationForm()" class="btn" style="padding: 1rem 3rem; font-size: 1.1rem;">
         <i class="fas fa-file-alt"></i> Apply for Available Positions
       </a>
+      
+      <p style="margin-top:2rem;color:var(--text-muted);font-size:0.95rem;">
+        <i class="fas fa-info-circle" style="margin-right:0.5rem;"></i>
+        You'll be redirected to our application form where you can select your desired position
+      </p>
     </div>
   </section>
 
@@ -1381,10 +1363,10 @@
     <button class="close-modal" onclick="closeAdmin()">&times;</button>
     <h3 style="margin-bottom: 2rem; color: var(--text-light);">Admin Portal</h3>
     <div style="margin-bottom: 1.5rem;">
-      <input type="text" class="form-control" placeholder="Username" id="adminUsername" style="width: 100%; padding: 0.75rem; background: var(--primary-dark); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--border-radius); color: var(--text-light);">
+      <input type="text" class="form-control" placeholder="Username" id="adminUsername">
     </div>
     <div style="margin-bottom: 1.5rem;">
-      <input type="password" class="form-control" placeholder="Password" id="adminPassword" style="width: 100%; padding: 0.75rem; background: var(--primary-dark); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--border-radius); color: var(--text-light);">
+      <input type="password" class="form-control" placeholder="Password" id="adminPassword">
     </div>
     <button class="btn" style="width: 100%; margin-top: 1rem;" onclick="adminLogin()">
       <i class="fas fa-sign-in-alt"></i> Sign In
@@ -1478,14 +1460,18 @@
     }
   });
   
-  // Google Form Application
+  // Google Form Application - FIXED FUNCTION
   function openApplicationForm() {
-    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeYw-6YvtassUB25LDLMt-U46SUaja9cXEtpqvt92DKxp2RIw/viewform?usp=sharing&ouid=109774810177921470951';
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeYw-6YvtassUB25LDLMt-U46SUaja9cXEtpqvt92DKxp2RIw/viewform?usp=sharing';
     
+    // Open in new tab
     window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
     
     // Show notification
-    showNotification('Opening application form...');
+    showNotification('Opening Google Form for job application...');
+    
+    // Return false to prevent default behavior
+    return false;
   }
   
   // Notification function
@@ -1575,46 +1561,7 @@
   // Initialize with first animation
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.hero').classList.add('fade-in');
-    
-    // Load job listings
-    loadJobListings();
   });
-  
-  // Load job listings dynamically
-  function loadJobListings() {
-    const careersList = document.querySelector('.careers-list');
-    
-    const jobs = [
-      {
-        title: "Full Stack Developer",
-        location: "Attock, Pakistan",
-        type: "Full-time"
-      },
-      {
-        title: "UI/UX Designer",
-        location: "Remote",
-        type: "Contract"
-      },
-      {
-        title: "DevOps Engineer",
-        location: "Attock, Pakistan",
-        type: "Full-time"
-      }
-    ];
-    
-    careersList.innerHTML = jobs.map(job => `
-      <div class="job-item">
-        <div class="job-info">
-          <h4>${job.title}</h4>
-          <div style="color: var(--text-muted);">${job.location}</div>
-          <div class="job-tag">${job.type}</div>
-        </div>
-        <button onclick="openApplicationForm()" class="btn" style="padding: 0.5rem 1.5rem;">
-          Apply Now
-        </button>
-      </div>
-    `).join('');
-  }
 </script>
 
 </body>
